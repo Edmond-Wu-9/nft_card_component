@@ -4,36 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css"> <!--Style sheet import-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Imports fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <title>NFT preview card component</title>
-
 </head>
 <body>
   <main>
-    <article>
+    <article> <!--Container for NFT Card-->
       <picture>
         <img src="./images/image-equilibrium.jpg" class="NFT" alt="Image of NFT">
+        <img src="./images/icon-view.svg" alt="Eye" class="overlay">
       </picture>
-
       <div class="card-information">
         <h1 class="title">Equilibrium #3429</h1>
         <p class="description">Our Equilibrium collection promotes balance and calm.</p>
-        <img src="./images/icon-ethereum.svg" class="Eth-logo" alt="Image of the Symbol Etheruem">
-        <p class="price">0.041 ETH</p>
-        <img src="./images/icon-clock.svg" class="Clock-logo" alt="Image of the Clock">
-        <p class="time">3 days left</p>
-        <img src="./images/image-avatar.png" class="avatar" alt="Image of the Avatar">
-        <p class="author">Creation of Edmond Wu</p>
+        <div class="price-and-time">
+          <div class="price-container">
+            <img src="./images/icon-ethereum.svg" class="Eth-logo" alt="Image of the Symbol Etheruem">
+            <p class="price">0.041 ETH</p>
+          </div>
+          <div class="time-container">
+            <img src="./images/icon-clock.svg" class="Clock-logo" alt="Image of the Clock">
+            <p class="time">3 days left</p>
+          </div>
+        </div>
+        <hr class="hr">
+        <div class="acknowledgement">
+          <img src="./images/image-avatar.png" class="avatar" alt="Image of the Avatar">
+          <p class="author"><span>Creation of</span> Edmond Wu</p>
+        </div>
       </div>
     </article>
   </main>
-
-  <!--<footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </footer>-->  
-
 </body>
 </html>

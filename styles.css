@@ -16,11 +16,11 @@
     --white: hsl(0, 0%, 100%);
 }
 
-img{
+img{ /*Image wont overflows its container*/
     max-width: 100%;
 }
 
-*{
+*{ /*Reset*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +29,6 @@ img{
 body,
 main{
     background-color:var(--dark-blue-main-BG);
-    font-size: 18px;
     font-family: 'Outfit', sans-serif;
     display: flex;
     flex-direction: column;
@@ -38,18 +37,110 @@ main{
     height: 100vh;
 }
 
-article{
+article{ /*Container for Card*/
     background-color: var(--dark-blue-card-BG);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    max-width: 300px;
+    max-width: 350px;
 }
 
-article .NFT{
-    max-width: 200px;
+.NFT{ /*NFT Image*/
+    align-items: center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: block;
 }
 
-article .avatar{
-    max-width: 50px;
+.title{ /*Title of the Card: Equilibrium #3429*/
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-weight: 400;
+
+}
+
+.description{ /*Our Equilibrium collection promotes balance and calm.*/
+    color: var(--soft-blue);
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.price-and-time{ /*Container for price and time*/
+    display:flex;
+    margin-bottom: 1rem;
+}
+
+.price-container{ /*Container for price */
+    display: flex;
+    gap: 0.60rem;
+}
+
+.price{
+    color: var(--cyan);
+}
+
+.time{
+    color: var(--soft-blue);
+}
+
+.time-container{ /*Container for time */
+    display: flex;
+    margin-left: auto; 
+    margin-right: 0;
+    gap: 0.60rem;
+}
+
+.hr{
+    margin-bottom: 1rem;
+    height: 1px;
+    background-color:var(--soft-blue) ;
+    border: none;
+}
+
+.avatar{
+    max-width: 45px;
+}
+
+.acknowledgement{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.author{
+    color: var(--white);
+}
+
+article span{
+    color: var(--soft-blue);
+}
+
+.author:hover,
+.title:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+picture{
+    position: relative;
+}
+
+.overlay{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+picture:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+
+picture:hover .NFT{
+    opacity: 0.5;
 }
