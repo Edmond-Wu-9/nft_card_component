@@ -1,2 +1,55 @@
+/*Layout: Mobile: 375px ; Desktop: 1440px*/
+
 .attribution { font-size: 11px; text-align: center; } /*Given for the footer*/
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap'); /*Import font needed for project*/
+/*font-family: 'Outfit', sans-serif;*/
+/*Font size (paragraph): 18px*/
+
+:root{ /*Added universal colors*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --dark-blue-main-BG: hsl(217, 54%, 11%);
+    --dark-blue-card-BG: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+img{
+    max-width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+main{
+    background-color:var(--dark-blue-main-BG);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+article{
+    background-color: var(--dark-blue-card-BG);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+}
+
+article .NFT{
+    max-width: 200px;
+}
+
+article .avatar{
+    max-width: 50px;
+}
